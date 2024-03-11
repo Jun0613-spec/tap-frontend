@@ -1,0 +1,39 @@
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import Layout from "./components/layouts/layout";
+
+import Home from "./pages/Home";
+import UserProfile from "./pages/UserProfile";
+import AuthCallback from "./pages/AuthCallback";
+import ProtectedRoute from "./pages/ProtectedRoute";
+
+function App() {
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Layout showHero>
+            <Home />
+          </Layout>
+        }
+      />
+      <Route path="/auth-callback" element={<AuthCallback />} />
+
+      <Route element={<ProtectedRoute />}>
+        <Route
+          path="/user-profile"
+          element={
+            <Layout>
+              <UserProfile />
+            </Layout>
+          }
+        />
+      </Route>
+
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  );
+}
+
+export default App;
