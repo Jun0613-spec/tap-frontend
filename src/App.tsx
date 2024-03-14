@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import UserProfile from "./pages/UserProfile";
 import AuthCallback from "./pages/AuthCallback";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import ManageRestaurant from "./pages/ManageRestaurant";
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
           element={
             <Layout>
               <UserProfile />
+            </Layout>
+          }
+        />
+        <Route
+          path="/manage-restaurant"
+          element={
+            <Layout>
+              <ManageRestaurant />
             </Layout>
           }
         />
