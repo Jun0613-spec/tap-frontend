@@ -57,7 +57,7 @@ export type Order = {
   restaurantId: string;
 };
 
-export type RestaurantSearchResponse = {
+export type RestaurantSearch = {
   data: Restaurant[];
   pagination: {
     total: number;

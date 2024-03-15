@@ -7,6 +7,7 @@ import UserProfile from "./pages/UserProfile";
 import AuthCallback from "./pages/AuthCallback";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import ManageRestaurant from "./pages/ManageRestaurant";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -20,6 +21,15 @@ function App() {
         }
       />
       <Route path="/auth-callback" element={<AuthCallback />} />
+
+      <Route
+        path="/search/:city"
+        element={
+          <Layout showHero={false}>
+            <Search />
+          </Layout>
+        }
+      />
 
       <Route element={<ProtectedRoute />}>
         <Route
