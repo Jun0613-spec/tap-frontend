@@ -76,7 +76,7 @@ const SearchBar = ({ onSubmit, placeHolder, onReset, searchQuery }: Props) => {
             onClick={handleReset}
             type="button"
             size="sm"
-            className="rounded-xl bg-red-500 text-neutral-100 dark:bg-red-700 dark:text-neutral-200 hover:bg-red-600 dark:hover:bg-red-900"
+            className="rounded-xl bg-red-500 text-neutral-100 dark:bg-red-700 dark:text-neutral-200 hover:bg-red-600 dark:hover:bg-red-800"
           >
             Reset
           </Button>

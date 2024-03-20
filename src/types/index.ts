@@ -65,3 +65,34 @@ export type RestaurantSearch = {
     pages: number;
   };
 };
+
+export type SearchState = {
+  searchQuery: string;
+  page: number;
+  selectedCuisines: string[];
+  sortOption: string;
+};
+
+export type CartItem = {
+  _id: string;
+  name: string;
+  price: number;
+  quantity: number;
+};
+
+export type CheckoutSessionRequest = {
+  cartItems: {
+    menuItemId: string;
+    name: string;
+    quantity: string;
+  }[];
+  deliveryDetails: {
+    email: string;
+    name: string;
+    addressLine: string;
+    postcode: string;
+    city: string;
+    country: string;
+  };
+  restaurantId: string;
+};

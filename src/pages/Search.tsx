@@ -12,12 +12,7 @@ import SearchResultCard from "@/components/search/SearchResultCard";
 import SortOptionDropdown from "@/components/search/SortOptionDropdown";
 import PaginationSelector from "@/components/search/PaginationSelector";
 
-export type SearchState = {
-  searchQuery: string;
-  page: number;
-  selectedCuisines: string[];
-  sortOption: string;
-};
+import { SearchState } from "@/types";
 
 const Search = () => {
   const { city } = useParams();

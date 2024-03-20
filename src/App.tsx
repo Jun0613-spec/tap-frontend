@@ -8,6 +8,8 @@ import AuthCallback from "./pages/AuthCallback";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import ManageRestaurant from "./pages/ManageRestaurant";
 import Search from "./pages/Search";
+import RestaurantDetail from "./pages/RestaurantDetail";
+import OrderStatus from "./pages/OrderStatus";
 
 function App() {
   return (
@@ -31,7 +33,24 @@ function App() {
         }
       />
 
+      <Route
+        path="/detail/:restaurantId"
+        element={
+          <Layout showHero={false}>
+            <RestaurantDetail />
+          </Layout>
+        }
+      />
+
       <Route element={<ProtectedRoute />}>
+        <Route
+          path="/order-status"
+          element={
+            <Layout>
+              <OrderStatus />
+            </Layout>
+          }
+        />
         <Route
           path="/user-profile"
           element={

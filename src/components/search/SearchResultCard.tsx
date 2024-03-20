@@ -29,12 +29,12 @@ const SearchResultCard = ({ restaurant }: Props) => {
           </h3>
           <div id="card-content" className="flex flex-wrap gap-2">
             {restaurant.cuisines.map((item, index) => (
-              <span
+              <p
                 key={index}
                 className="px-2 py-1 bg-green-500 text-neutral-100 dark:bg-green-700  rounded-full"
               >
                 {item}
-              </span>
+              </p>
             ))}
           </div>
         </div>
