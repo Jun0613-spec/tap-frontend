@@ -13,13 +13,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const ManageRestaurant = () => {
   const { createRestaurant, isLoading: isCreateLoading } =
     useCreateMyRestaurant();
+
   const { restaurant } = useGetMyRestaurant();
+
   const { updateRestaurant, isLoading: isUpdateLoading } =
     useUpdateMyRestaurant();
 
-  const isEditing = restaurant ? true : false;
-
   const { orders } = useGetMyRestaurantOrder();
+
+  const isEditing = !!restaurant;
 
   return (
     <Tabs>

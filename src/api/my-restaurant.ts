@@ -143,7 +143,7 @@ export const useCreateMyRestaurant = () => {
 
   if (isSuccess) toast.success("Restaurant created");
 
-  if (error) toast.error("Unable to update restaurant");
+  if (error) toast.error("Unable to create restaurant");
 
   return { createRestaurant, isLoading };
 };

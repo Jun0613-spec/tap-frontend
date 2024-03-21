@@ -68,7 +68,6 @@ const Details = () => {
                   <Input
                     {...field}
                     className="bg-neutral-50 dark:bg-neutral-900"
-                    defaultValue="United Kingdom"
                   />
                 </FormControl>
                 <FormMessage />
