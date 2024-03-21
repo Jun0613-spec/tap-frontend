@@ -31,7 +31,7 @@ export type Restaurant = {
 export type OrderStatus =
   | "placed"
   | "paid"
-  | "inProgress"
+  | "preparing"
   | "outForDelivery"
   | "delivered";
 
@@ -42,6 +42,7 @@ export type Order = {
   cartItems: {
     menuItemId: string;
     name: string;
+    price: number;
     quantity: string;
   }[];
   deliveryDetails: {
@@ -49,6 +50,7 @@ export type Order = {
     addressLine: string;
     postcode: string;
     city: string;
+    country: string;
     email: string;
   };
   totalAmount: number;
@@ -84,7 +86,7 @@ export type CheckoutSessionRequest = {
   cartItems: {
     menuItemId: string;
     name: string;
-    quantity: string;
+    quantity: number;
   }[];
   deliveryDetails: {
     email: string;
@@ -95,4 +97,9 @@ export type CheckoutSessionRequest = {
     country: string;
   };
   restaurantId: string;
+};
+
+export type UpdateOrderStatus = {
+  orderId: string;
+  status: string;
 };

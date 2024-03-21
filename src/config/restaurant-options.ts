@@ -9,6 +9,7 @@ export const cuisineList = [
   "Fastfood",
   "French",
   "Greek",
+  "Halal",
   "Indian",
   "Italian",
   "Japanese",
@@ -21,5 +22,6 @@ export const cuisineList = [
   "Salads",
   "Spanish",
   "Steak",
+  "Thai",
   "Vegan",
 ];

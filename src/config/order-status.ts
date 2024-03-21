@@ -6,14 +6,38 @@ interface OrderStatusInfo {
   progressValue: number;
 }
 
+enum ProgressPercentage {
+  Placed = 0,
+  OrderReceived = 25,
+  Preparing = 50,
+  OutForDelivery = 75,
+  Delivered = 100,
+}
+
 export const ORDER_STATUS: OrderStatusInfo[] = [
-  { label: "Placed", value: "placed", progressValue: 0 },
   {
-    label: "Waiting For Confirmation",
-    value: "paid",
-    progressValue: 25,
+    label: "Placed",
+    value: "placed",
+    progressValue: ProgressPercentage.Placed,
   },
-  { label: "In Progress", value: "inProgress", progressValue: 50 },
-  { label: "Out for Delivery", value: "outForDelivery", progressValue: 75 },
-  { label: "Delivered", value: "delivered", progressValue: 100 },
+  {
+    label: "Order Received",
+    value: "paid",
+    progressValue: ProgressPercentage.OrderReceived,
+  },
+  {
+    label: "Preparing",
+    value: "preparing",
+    progressValue: ProgressPercentage.Preparing,
+  },
+  {
+    label: "Out for Delivery",
+    value: "outForDelivery",
+    progressValue: ProgressPercentage.OutForDelivery,
+  },
+  {
+    label: "Delivered",
+    value: "delivered",
+    progressValue: ProgressPercentage.Delivered,
+  },
 ];

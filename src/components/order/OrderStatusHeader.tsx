@@ -32,14 +32,20 @@ const OrderStatusHeader = ({ order }: Props) => {
 
   return (
     <>
-      <div className="text-xl md:text-3xl font-bold tracking-tighter flex flex-col gap-5 md:flex-row md:justify-between text-neutral-800 dark:text-neutral-300">
-        <p> Order Status: {getOrderStatusInfo().label}</p>
-        <p> Expected by: {getExpectedDelivery()}</p>
+      <div className="flex flex-col gap-3 md:flex-row md:justify-between">
+        <p className="text-lg md:text-xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-300">
+          Order Status: {getOrderStatusInfo().label}
+        </p>
+        <p className="text-lg md:text-xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-300">
+          Expected by: {getExpectedDelivery()}
+        </p>
       </div>
-      <Progress
-        className="animate-pulse bg-green-300 dark:bg-green-800"
-        value={getOrderStatusInfo().progressValue}
-      />
+      <div className="mt-3">
+        <Progress
+          className="animate-pulse h-3 md:h-4 bg-neutral-200 dark:bg-neutral-500"
+          value={getOrderStatusInfo().progressValue}
+        />
+      </div>
     </>
   );
 };
