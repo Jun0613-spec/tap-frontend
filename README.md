@@ -1,14 +1,20 @@
-# React + TypeScript + Vite
-
 # Frontend for food ordering app Tap
 
 This is a repository for a food ordering app frontend with React, Typescript, Vite, TailwindCSS, Auth0, Stripe
 
+### Backend repository
+
+```shell
+https://github.com/Jun0613-spec/tap-backend
+```
+
 ### Stripe test card
 
+```shell
 Card Information
 4242 4242 4242 4242
 12/34 567
+```
 
 ### Install packages
 
