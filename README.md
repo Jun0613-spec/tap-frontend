@@ -5,7 +5,7 @@ This is a repository for a food ordering app frontend with React, Typescript, Vi
 ### Backend repository
 
 ```js
-<a href="https://github.com/Jun0613-spec/tap-backend">Backend repository</a>
+[a link](https://github.com/Jun0613-spec/tap-backend)
 ```
 
 ### Stripe test card
