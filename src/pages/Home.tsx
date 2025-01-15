@@ -7,7 +7,7 @@ const Home = () => {
 
   const onSearchSubmitHandler = (searchFormValues: SearchForm) => {
     navigate({
-      pathname: `/search/${searchFormValues.searchQuery}`,
+      pathname: `/search/${searchFormValues.searchQuery}`
     });
   };
 
